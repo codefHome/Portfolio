@@ -1,0 +1,122 @@
+import { Typography, Box } from "@mui/material";
+import CodeIcon from "@mui/icons-material/IntegrationInstructions";
+import HorizontalDivider from "../components/HorizontalDivider";
+import AboutMeCard from "../components/AboutMeCard";
+import SchoolIcon from "@mui/icons-material/School";
+import { ExperienceIcon } from "../assets/icons/ExperienceIcon";
+import { BuildWebIcon } from "../assets/icons/BuildWebIcon";
+import { FreeTime } from "../assets/icons/FreeTime";
+
+const AboutMe = () => {
+  return (
+    <div className="flex  mt-[17%] justify-center items-center  ">
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          width: "65%",
+          border: "1px solid #92e3a9",
+          borderRadius: "15px",
+          background: "#92e3a9",
+          boxShadow:
+            "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
+          p: "20px",
+        }}
+        className="flex flex-col"
+      >
+        <Typography variant="caption">About Me</Typography>
+        <Typography variant="subtitle2">who I'm</Typography>
+        <HorizontalDivider />
+        <Box>
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-between gap-5">
+              <img
+                src="./myPic1.png"
+                alt="avatar show coding"
+                width="350px"
+                height="350px"
+                className="shadow-2xl rounded-lg w-fit"
+              />
+              <span className="flex flex-col  w-full mt-3">
+                <AboutMeCard
+                  icon={<ExperienceIcon />}
+                  title="In Locker"
+                  url="Over 5 years Experience"
+                />
+                <AboutMeCard
+                  icon={<SchoolIcon sx={{ width: "24px", height: "24px" }} />}
+                  title="Got MSc"
+                  url="Software Engineering"
+                />
+                <AboutMeCard
+                  icon={<CodeIcon />}
+                  title="Upscale"
+                  url={
+                    <a
+                      href="https://my-react-pet-app.netlify.app/"
+                      target="_blank"
+                    >
+                      my-music-playlist
+                    </a>
+                  }
+                />
+                <AboutMeCard
+                  icon={<BuildWebIcon />}
+                  title="Crafting"
+                  url={
+                    <a
+                      href="https://my-react-pet-app.netlify.app/"
+                      target="_blank"
+                    >
+                      course-manager-app
+                    </a>
+                  }
+                />
+                <AboutMeCard
+                  icon={<FreeTime />}
+                  title="Leisure"
+                  url="Watch Football, Walk"
+                />
+              </span>
+            </div>
+            <Typography variant="caption">Me at a glance</Typography>
+            <Typography
+              sx={{
+                color: "gray",
+                fontSize: "12px",
+                mt: "-12px",
+                ml: "2px",
+                mb: "-10px",
+              }}
+            >
+              Read me here
+            </Typography>
+            <HorizontalDivider />
+            <Typography
+              variant="subtitle2"
+              sx={{
+                width: "100%",
+                mt: "-5%",
+                textAlign: "justify",
+              }}
+            >
+              I am forward-thinking Software Engineer, who possess a robust
+              abilities and extensive experience in the constantly evolving
+              field of technology. Personally, I am deeply committed to
+              continually enhancing my skills, reflecting a strong sense of
+              discipline and dedication.
+            </Typography>
+            <Typography>
+              During my leisure time, I enjoy watching TV, catching football
+              matches, and going for walks. These activities offer both
+              entertainment and relaxation, allowing me to unwind and recharge.
+            </Typography>
+          </div>
+        </Box>
+      </Box>
+    </div>
+  );
+};
+
+export default AboutMe;
