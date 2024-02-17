@@ -16,12 +16,12 @@ const AboutMe = () => {
           justifyContent: "space-between",
           alignItems: "center",
           width: "65%",
-          border: "1px solid #92e3a9",
           borderRadius: "15px",
-          background: "#92e3a9",
-          boxShadow:
-            "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
           p: "20px",
+          border: "1px solid #d6f3e7",
+          background: "#d6f3e7",
+          boxShadow:
+            "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
         }}
         className="flex flex-col"
       >
@@ -54,7 +54,7 @@ const AboutMe = () => {
                   title="Upscale"
                   url={
                     <a
-                      href="https://my-react-pet-app.netlify.app/"
+                      href="https://my-music-playlist.netlify.app/"
                       target="_blank"
                     >
                       my-music-playlist

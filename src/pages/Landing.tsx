@@ -9,6 +9,7 @@ import SocialMedia from "../components/SocialMedia";
 import IndicativeBox from "../components/IndicativeBox";
 import TopSkillView from "./TopSkillView";
 import AboutMe from "./AboutMe";
+import MyWork from "./MyWork";
 
 const Landing = () => {
   const quate =
@@ -115,7 +116,7 @@ const Landing = () => {
             </IconButton>
           </div>
           <div className="flex flex-col w-3/5 h-fit justify-center items-center ">
-            <img src="./mypic.png" alt="my picture" />
+            <img src="./mypic.png" alt="my cartoon" />
             <Typography
               sx={{
                 fontStyle: "italic",
@@ -131,6 +132,7 @@ const Landing = () => {
         </div>
         <TopSkillView />
         <AboutMe />
+        <MyWork />
       </div>
     </Box>
   );

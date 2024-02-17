@@ -1,22 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { IButtonProps } from "../types/types";
 
-const ButtonWithIcon = ({ icon, label, onEnter, onLeave }: IButtonProps) => {
+const ButtonWithIcon = ({ icon, label }: IButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    if (onEnter) {
-      onEnter();
-    }
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    if (onLeave) {
-      onLeave();
-    }
   };
 
   return (
