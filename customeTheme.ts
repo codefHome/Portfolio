@@ -80,11 +80,10 @@ const lightTheme = createTheme({
       letterSpacing: '1px',
     },
     overline: {
-      color: '#3CA32B',
-      textDecoration: 'underline',
+      color: '#000000',
       textTransform: 'none',
-      fontSize: '12.794px',
-      fontWeight: 400,
+      fontSize: '16px',
+      fontWeight: 600,
     },
     subtitle1: {
       color: '#000',
@@ -99,7 +98,6 @@ const lightTheme = createTheme({
         fontWeight: 400,
         fontSize: '16px',
         lineHeight: 'normal',
-        letterSpacing: '0.5px',
         textTransform: 'none',
        
       },

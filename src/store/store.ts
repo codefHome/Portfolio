@@ -1,17 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import landingReducer from "./slices/landingSlice";
+import { landingPageAPI } from "../api/landingAPI";
 
 const store = configureStore({
   reducer: {
     lading: landingReducer,
    
-    // [authAPI.reducerPath]: authAPI.reducer,
+    [landingPageAPI.reducerPath]: landingPageAPI.reducer,
     
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat([
-    //   authAPI.middleware,
+      landingPageAPI.middleware,
      
     ]),
 });

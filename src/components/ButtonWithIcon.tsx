@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { IButtonProps } from "../types/types";
 
-const ButtonWithIcon = ({ icon, label }: IButtonProps) => {
+const ButtonWithIcon = ({ icon, label, handleClick }: IButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -26,6 +26,7 @@ const ButtonWithIcon = ({ icon, label }: IButtonProps) => {
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
       {icon}
       <Typography sx={{ color: isHovered ? "white" : "" }}>{label}</Typography>

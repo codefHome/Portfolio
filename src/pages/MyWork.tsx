@@ -41,7 +41,7 @@ const MyWork = () => {
     },
   ];
   return (
-    <div className="flex flex-col mt-[10%]">
+    <div className="flex flex-col ">
       <Typography variant="caption"> My Projects</Typography>
       <Typography variant="subtitle2">
         Project's that I have been working on
@@ -49,10 +49,7 @@ const MyWork = () => {
       <HorizontalDivider />
       <Box className="flex flex-wrap justify-center gap-[5%]">
         {projects?.map((project) => (
-          <Box
-            key={project.id}
-            className="border-1 rounded-lg p-2 bg-[#92e3a9] mb-4"
-          >
+          <Box key={project.id} className="border-1 rounded-lg p-2 border mb-4">
             <ProjectCard
               title={project?.title}
               url={project?.url}

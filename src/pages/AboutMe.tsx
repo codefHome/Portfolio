@@ -9,13 +9,12 @@ import { FreeTime } from "../assets/icons/FreeTime";
 
 const AboutMe = () => {
   return (
-    <div className="flex  mt-[17%] justify-center items-center  ">
+    <div className="flex  mt-[17%] justify-center items-center mb-[10%] ">
       <Box
         sx={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          width: "65%",
           borderRadius: "15px",
           p: "20px",
           border: "1px solid #d6f3e7",
@@ -23,14 +22,14 @@ const AboutMe = () => {
           boxShadow:
             "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
         }}
-        className="flex flex-col"
+        className="flex flex-col w-full lg:w-[65%]"
       >
         <Typography variant="caption">About Me</Typography>
         <Typography variant="subtitle2">who I'm</Typography>
         <HorizontalDivider />
         <Box>
           <div className="flex flex-col gap-2">
-            <div className="flex justify-between gap-5">
+            <div className="flex flex-col lg:flex-row justify-between gap-5">
               <img
                 src="./myPic1.png"
                 alt="avatar show coding"

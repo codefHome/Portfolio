@@ -8,8 +8,8 @@ const SocialMedia = () => {
     <Box
       sx={{
         position: "fixed",
-        left: "12%",
-        top: "60%",
+        left: "11%",
+        top: "70%",
       }}
     >
       <ul>
