@@ -47,6 +47,7 @@ export interface LandingTypes {
     isWorkVisible:boolean;
     isExperienceVisible:boolean;
     openDrawer:boolean;
+    isDark:boolean;
   }
 
   export interface Experience {

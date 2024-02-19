@@ -86,7 +86,7 @@ const lightTheme = createTheme({
       fontWeight: 600,
     },
     subtitle1: {
-      color: '#000',
+      color: '#fff',
       fontWeight: 400,
       fontSize: '20px',
       lineHeight: 'normal',
@@ -100,7 +100,6 @@ const lightTheme = createTheme({
         lineHeight: 'normal',
         textTransform: 'none',
         whiteSpace:'wrap'
-       
       },
 
   },
@@ -158,26 +157,34 @@ const darkTheme = createTheme({
   typography: {
     fontFamily: 'Inter',
     caption: {
-      color: '#ededed',
-      fontSize: 12,
-      fontWeight: '700',
-      lineHeight: 'normal',
+      color: '#ffffff',
+      fontSize: 40,
+      fontWeight: 'normal',
+      letterSpacing: '1px',
     },
     overline: {
-      color: '#ededed',
-      textDecoration: 'underline',
+      color: '#ffffff',
       textTransform: 'none',
-      fontSize: '12.794px',
-      fontWeight: 400,
+      fontSize: '16px',
+      fontWeight: 600,
     },
     subtitle1: {
-      color: '#ededed',
-      fontWeight: 500,
-      fontSize: '24px',
-      lineHeight: '36px',
+      color: '#000',
+      fontWeight: 400,
+      fontSize: '20px',
+      lineHeight: 'normal',
       letterSpacing: '-0.456px',
       textTransform: 'none',
     },
+    subtitle2: {
+        color: '#2e2e2e',
+        fontWeight: 400,
+        fontSize: '16px',
+        lineHeight: 'normal',
+        textTransform: 'none',
+        whiteSpace:'wrap'
+       
+      },
 
   },
   components: {

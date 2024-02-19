@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from "../store/hooks";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
   setDrawerState,
+  setIsDark,
   setIsExperienceVisible,
   setIsHomeVisible,
   setIsResumeVisible,
@@ -20,6 +21,7 @@ import { HeaderProps } from "../types/types";
 const Header = ({ handleSayHello }: HeaderProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const { openDrawer } = useAppSelector((state) => state.lading);
+
   const mouseEnter = () => {
     setIsHovered(true);
   };
@@ -49,6 +51,9 @@ const Header = ({ handleSayHello }: HeaderProps) => {
   };
   const handleClose = () => {
     dispatch(setDrawerState(false));
+  };
+  const handleDarkMode = () => {
+    dispatch(setIsDark());
   };
   return (
     <>
@@ -83,7 +88,7 @@ const Header = ({ handleSayHello }: HeaderProps) => {
           <Box sx={{ position: "inherit" }}>
             <ButtonWithIcon label="bedada6@gmail.com" icon={<EmailIcon />} />
           </Box>
-          <IconButton>
+          <IconButton onClick={handleDarkMode}>
             <Brightness4Icon />
           </IconButton>
         </div>

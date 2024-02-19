@@ -6,7 +6,8 @@ const initialState: LandingTypes = {
  isHomeVisible:true,
  isWorkVisible:false,
  isExperienceVisible:false,
- openDrawer:false
+ openDrawer:false,
+ isDark:false
  
 };
 
@@ -45,6 +46,9 @@ const landingSlice = createSlice({
     setDrawerState(state, action: PayloadAction<boolean>) {
       state.openDrawer = action.payload;
     },
+    setIsDark(state){
+      state.isDark = !state.isDark
+    }
    
   },
 });
@@ -54,7 +58,8 @@ export const {
   setIsExperienceVisible,
   setIsHomeVisible,
   setIsWorkVisible,
-  setDrawerState
+  setDrawerState,
+  setIsDark
 
 } = landingSlice.actions;
 

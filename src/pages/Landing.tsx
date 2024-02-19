@@ -23,6 +23,7 @@ const Landing = () => {
     }
     dispatch(setDrawerState(false));
   };
+  const { isDark } = useAppSelector((state) => state.lading);
   return (
     <div className="flex flex-col ">
       <Box
@@ -30,7 +31,9 @@ const Landing = () => {
           position: "relative",
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
         }}
-        className="flex flex-col self-center border rounded-[5px] bg-[#ffffff] w-[95%] lg:w-[90%] p-1 lg:p-6 "
+        className={`flex flex-col self-center border rounded-[5px] ${
+          isDark ? "bg-black" : "bg-[#ffffff]"
+        } w-[95%] lg:w-[90%] p-1 lg:p-6 `}
       >
         <SocialMedia />
         <Header handleSayHello={handleSayHello} />
