@@ -11,6 +11,7 @@ const SocialMedia = () => {
         left: "11%",
         top: "70%",
       }}
+      className="hidden lg:flex"
     >
       <ul>
         <li>

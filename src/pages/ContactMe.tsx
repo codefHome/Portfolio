@@ -38,15 +38,11 @@ const ContactMe = ({ targetRef }: ContactMeProps) => {
         display: "flex",
         flexDirection: "column",
         justifySelf: "center",
-        width: "100%",
         border: "1px solid #fff",
-        alignSelf: "center",
         borderRadius: "15px",
         background: "#ffffff",
-
-        p: "20px",
       }}
-      className="flex flex-col  mt-[10%] w-full "
+      className="flex flex-col  mt-[10%] w-full ml-[-13%] lg:ml-0 self-center"
     >
       <Box
         sx={{
@@ -55,7 +51,7 @@ const ContactMe = ({ targetRef }: ContactMeProps) => {
           justifySelf: "center",
           width: "100%",
           border: "1px solid #ffede9",
-          alignSelf: "center",
+          // alignSelf: "center",
           borderRadius: "15px",
           background: "#ffede9",
           boxShadow:
@@ -63,8 +59,6 @@ const ContactMe = ({ targetRef }: ContactMeProps) => {
           p: "20px",
         }}
       >
-        <Typography variant="caption"></Typography>
-
         <Typography variant="caption" sx={{ mt: "10px", textAlign: "center" }}>
           Want to Contact Me!
         </Typography>

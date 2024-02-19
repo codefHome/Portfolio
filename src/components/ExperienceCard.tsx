@@ -43,13 +43,14 @@ const ExperienceCard = ({
         boxShadow:
           "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
       }}
+      className="ml-[-12%] lg:ml-0 self-cente"
     >
-      <div className="flex justify-between w-full">
-        <span className="flex justify-center items-center">
-          <Typography variant="subtitle1">{title} </Typography>
-          <Typography variant="overline">&nbsp;@ {companyName}</Typography>
+      <div className="flex flex-wrap justify-between w-full">
+        <span className="flex flex-wrap justify-start items-center">
+          <Typography variant="subtitle1">{title} &nbsp;@</Typography>
+          <Typography variant="overline"> {companyName}</Typography>
         </span>
-        <Typography variant="subtitle1">
+        <Typography className="text-left w-full" variant="subtitle1">
           {startYear} - {endYear}
         </Typography>
       </div>
@@ -110,41 +111,47 @@ const ExperienceCard = ({
                   alignSelf: "center",
                   borderRadius: "15px",
                   background: "#ffede9",
-                  boxShadow: "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;",
-                  p: "20px",
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset",
+                  px: "20px",
                 }}
-                className="flex flex-col w-full mr-3"
+                className="flex flex-col w-full "
               >
-                <span className="flex justify-between w-full">
-                  <Typography variant="overline">
-                    Project:
-                    <Typography variant="subtitle2" component="span">
+                <span className="flex flex-wrap md:flex-nowrap justify-between w-full pt-2 md:pt-0 md:mb-[-5px]">
+                  <span className="hidden md:flex flex-wrap justify-start items-center  ">
+                    <Typography variant="overline" sx={{ mb: "-15px" }}>
+                      Project:
+                    </Typography>
+                    <Typography variant="subtitle2" className="flex flex-wrap">
                       &nbsp;{project?.ProjectName}
                     </Typography>
-                  </Typography>
-                  <Typography variant="overline">
-                    Location:
-                    <Typography component="span">
+                  </span>
+                  <span className="hidden md:flex flex-wrap justify-start  items-center">
+                    <Typography variant="overline" sx={{ mb: "-15px" }}>
+                      Location:
+                    </Typography>
+                    <Typography>
                       &nbsp;{project?.location}
                       <Typography variant="overline" component="span">
                         &nbsp;({project?.workType})
                       </Typography>
                     </Typography>
-                  </Typography>
+                  </span>
                 </span>
-                <span className="flex justify-between w-full">
-                  <Typography variant="overline">
-                    Role:
-                    <Typography variant="subtitle2" component="span">
+                <span className="flex flex-wrap md:flex-nowrap justify-between items-center w-full pb-2 md:pb-0 md:mt-[-5px]">
+                  <span className="flex flex-wrap items-center">
+                    <Typography variant="overline" className="hidden md:flex">
+                      Role:
+                    </Typography>
+                    <Typography variant="subtitle2">
                       &nbsp;{project?.role}
                     </Typography>
-                  </Typography>
-                  <Typography variant="subtitle2">
-                    {project?.startDate} -
-                    <Typography component="span">
-                      &nbsp;{project?.endDate}
+                  </span>
+                  <span className="flex flex-wrap items-center">
+                    <Typography variant="subtitle2">
+                      {project?.startDate} -
                     </Typography>
-                  </Typography>
+                    <Typography>&nbsp;{project?.endDate}</Typography>
+                  </span>
                 </span>
               </Box>
             </AccordionSummary>

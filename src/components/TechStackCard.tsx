@@ -41,7 +41,7 @@ const TechStackCard = ({ images, stacks, description }: TechStackCardProps) => {
           <div className="flex   w-full ">
             <ul className="flex flex-wrap items-center  px-2 ">
               {stacks.map((tech, index) => (
-                <li className="flex w-[150px]" key={index}>
+                <li className="flex w-[80px] lg:w-[140px]" key={index}>
                   {tech}
                 </li>
               ))}

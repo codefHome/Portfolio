@@ -22,14 +22,14 @@ const AboutMe = () => {
           boxShadow:
             "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
         }}
-        className="flex flex-col w-full lg:w-[65%]"
+        className="flex flex-col w-full lg:w-[65%] self-center ml-[-13%] lg:ml-0"
       >
         <Typography variant="caption">About Me</Typography>
         <Typography variant="subtitle2">who I'm</Typography>
         <HorizontalDivider />
         <Box>
           <div className="flex flex-col gap-2">
-            <div className="flex flex-col lg:flex-row justify-between gap-5">
+            <div className="flex flex-col md:flex-row justify-between gap-5">
               <img
                 src="./myPic1.png"
                 alt="avatar show coding"
@@ -79,7 +79,7 @@ const AboutMe = () => {
                 />
               </span>
             </div>
-            <Typography variant="caption">Me at a glance</Typography>
+            <Typography variant="overline">Me at a glance</Typography>
             <Typography
               sx={{
                 color: "gray",

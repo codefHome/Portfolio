@@ -99,6 +99,7 @@ const lightTheme = createTheme({
         fontSize: '16px',
         lineHeight: 'normal',
         textTransform: 'none',
+        whiteSpace:'wrap'
        
       },
 

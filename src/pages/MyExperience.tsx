@@ -17,14 +17,26 @@ const MyExperience = () => {
     }
   }, [data]);
   return (
-    <div className="flex flex-col">
-      <Typography variant="caption">Where I have been Working</Typography>
-      <span className="flex flex-col ml-3">
+    <div className="flex flex-col w-full">
+      <Typography variant="caption" className="hidden lg:flex">
+        Where I have been Working
+      </Typography>
+      <Typography
+        sx={{
+          mt: "-15px",
+          mb: "10px",
+        }}
+        variant="caption"
+        className="flex lg:hidden"
+      >
+        Experience
+      </Typography>
+      <span className="hidden lg:flex flex-col ml-3">
         <Typography variant="subtitle2">My Experience</Typography>
         <HorizontalDivider />
       </span>
 
-      <Box className="flex flex-col gap-10">
+      <Box className="flex flex-col gap-10 w-full">
         {!isSuccess && (
           <Box className="flex justify-center items-center">
             <CircularProgress />

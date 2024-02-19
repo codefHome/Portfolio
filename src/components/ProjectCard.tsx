@@ -13,12 +13,13 @@ const ProjectCard = ({ stacks, url, gitHubUrl, image }: ProjectCardProps) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+  console.log(window.innerWidth);
   return (
     <a href={url} target="_blank">
       <Box
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="flex border-1 rounded-md w-[450px] h-[200px] shadow-[rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px] relative"
+        className="flex border-1 rounded-md w-full md:w-[320px] lg:w-[470px] xl:w-[400px]  h-[200px] shadow-[rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px] flex-grow-1 relative"
       >
         <img src={image} alt="project" className="w-full" />
         {isHovered && (

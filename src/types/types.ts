@@ -46,6 +46,7 @@ export interface LandingTypes {
     isHomeVisible:boolean;
     isWorkVisible:boolean;
     isExperienceVisible:boolean;
+    openDrawer:boolean;
   }
 
   export interface Experience {
@@ -74,5 +75,19 @@ export interface LandingTypes {
     targetRef: React.RefObject<HTMLDivElement>;
   }
   export interface HomeProps{
+    handleSayHello: () => void;
+  }
+
+  export interface SideMenuProps{
+    open:boolean;
+    handleClose: () => void;
+    handleWorks: () => void;
+    handleHome: () => void;
+    handleResume: () => void;
+    handleExperience: () => void;
+    handleSayHello: () => void;
+  }
+
+  export interface HeaderProps{
     handleSayHello: () => void;
   }

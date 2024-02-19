@@ -106,7 +106,7 @@ const MyResume = () => {
   ];
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col ml-[-12%] lg:ml-0 self-center px-3 lg:px-0">
       <Typography variant="caption">Technologies I Use</Typography>
       <div className="flex justify-between">
         <span className="flex flex-col">
@@ -115,8 +115,6 @@ const MyResume = () => {
         </span>
         <Button
           sx={{
-            width: "200px",
-            height: "50px",
             borderRadius: "15px",
             background: "#ffede9",
             textTransform: "none",
@@ -125,13 +123,15 @@ const MyResume = () => {
             boxShadow:
               "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px",
           }}
+          className="w-[160px] md:w-[250px] h-[50px]"
         >
           Download Resume
         </Button>
       </div>
       <div className="flex flex-col gap-10">
-        {resume.map((stacks) => (
+        {resume.map((stacks, index) => (
           <TechStackCard
+            key={index}
             description={stacks?.description}
             images={stacks?.images}
             stacks={stacks?.stacks}

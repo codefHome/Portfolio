@@ -47,7 +47,7 @@ const MyWork = () => {
         Project's that I have been working on
       </Typography>
       <HorizontalDivider />
-      <Box className="flex flex-wrap justify-center gap-[5%]">
+      <Box className="flex flex-wrap  justify-center md:justify-between ml-[-13%] lg:ml-0 self-center">
         {projects?.map((project) => (
           <Box key={project.id} className="border-1 rounded-lg p-2 border mb-4">
             <ProjectCard

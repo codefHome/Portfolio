@@ -8,7 +8,7 @@ const Home = ({ handleSayHello }: HomeProps) => {
     "Hard work beats talent when talent doesn’t work hard- `${author}`. Talk is cheap. Show me the code '${author}`";
 
   return (
-    <div className="flex justify-between items-center ">
+    <div className="flex flex-wrap lg:flex-nowrap justify-between items-center ">
       <div className="flex flex-col w-fit ">
         <IndicativeBox text="Hi, there" />
         <Typography variant="caption">Bedada</Typography>
@@ -29,68 +29,65 @@ const Home = ({ handleSayHello }: HomeProps) => {
           crafting complex web application using state of the art technologies.
           Compiled for this role for over 5 years
         </Typography>
-        <IconButton
-          onClick={handleSayHello}
-          sx={{
-            ml: "30px",
-            width: "80px",
-            height: "80px",
-            border: "1px solid #C078B3",
-            borderRadius: "50%",
-            background: "#C078B3",
-            marginTop: "40px",
-            boxShadow:
-              "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
-            "&:hover": {
-              background: "blue",
-            },
-          }}
-        >
-          <Box
+        <span className="hidden lg:flex">
+          <IconButton
+            onClick={handleSayHello}
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              width: "60px",
-              height: "60px",
-              border: "1px solid #c9bec7",
-              background: "#c9bec7",
+              ml: "30px",
+              width: "80px",
+              height: "80px",
+              border: "1px solid #C078B3",
               borderRadius: "50%",
-              padding: "10px",
+              background: "#C078B3",
+              marginTop: "40px",
               boxShadow:
                 "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
+              "&:hover": {
+                background: "blue",
+              },
             }}
           >
-            <Typography
+            <Box
               sx={{
-                fontSize: "14px",
-                color: "black",
-                textAlign: "start",
+                display: "flex",
+                flexDirection: "column",
+                width: "60px",
+                height: "60px",
+                border: "1px solid #c9bec7",
+                background: "#c9bec7",
+                borderRadius: "50%",
+                padding: "10px",
+                boxShadow:
+                  "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
               }}
             >
-              Say,
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "14px",
-                color: "black",
-                textAlign: "end",
-              }}
-            >
-              Hello
-            </Typography>
-          </Box>
-        </IconButton>
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  color: "black",
+                  textAlign: "start",
+                }}
+              >
+                Say,
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  color: "black",
+                  textAlign: "end",
+                }}
+              >
+                Hello
+              </Typography>
+            </Box>
+          </IconButton>
+        </span>
       </div>
-      <div className="flex flex-col w-3/5 h-fit justify-center items-center ">
+      <div className="flex flex-col w-4/5 lg:w-3/5 h-fit justify-center items-center ">
         <img src="./mypic.png" alt="my cartoon" />
         <Typography
-          sx={{
-            fontStyle: "italic",
-            fontSize: "14px",
-            textAlign: "justify",
-            color: "black",
-            width: "300px",
-          }}
+          variant="subtitle2"
+          className="text-[10px] lg:text-sm text-wrap italic"
         >
           {quate}
         </Typography>

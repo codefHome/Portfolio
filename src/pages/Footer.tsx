@@ -1,5 +1,9 @@
+import { IconButton } from "@mui/material";
 import ButtonWithIcon from "../components/ButtonWithIcon";
 import { useAppDispatch } from "../store/hooks";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import {
   setIsResumeVisible,
   setIsWorkVisible,
@@ -37,8 +41,8 @@ const Footer = () => {
     });
   };
   return (
-    <div className="flex flex-col self-center justify-center w-[80%] mt-[2%]  mb-[2%]">
-      <div className="flex">
+    <div className="flex flex-col self-center justify-center w-full lg:w-[80%] mt-[2%]  mb-[2%]">
+      <div className="hidden lg:flex">
         <div onClick={handleHome} className=" flex  justify-end ">
           <ButtonWithIcon label="Home" />
         </div>
@@ -50,6 +54,36 @@ const Footer = () => {
         <div className="flex w-full justify-end  items-center">
           {Date()}, Addis Ababa, Ethiopia
         </div>
+      </div>
+      <div className="flex lg:hidden justify-center">
+        <ul className="flex justify-between items-center w-full px-1">
+          <li>
+            <a href="https://www.linkedin.com/in/bedada-bekele/" target="blank">
+              <IconButton>
+                <LinkedInIcon />
+              </IconButton>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/codefHome" target="_blank">
+              <IconButton>
+                <GitHubIcon />
+              </IconButton>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/BedadaBekele2" target="_blank">
+              <IconButton>
+                <TwitterIcon />
+              </IconButton>
+            </a>
+          </li>
+
+          <li>
+            {new Date().toLocaleString("default", { month: "long" })}{" "}
+            {new Date().getFullYear()}, Addis Ababa, Ethiopia
+          </li>
+        </ul>
       </div>
     </div>
   );
