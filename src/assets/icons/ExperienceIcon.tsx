@@ -1,7 +1,9 @@
-export const ExperienceIcon = () => {
+import { IconProps } from "../../types/types";
+
+export const ExperienceIcon = ({ color }: IconProps) => {
   return (
     <svg
-      fill="#000000"
+      fill={color}
       width={24}
       height={24}
       viewBox="0 0 64 64"

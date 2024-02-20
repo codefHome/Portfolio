@@ -16,10 +16,17 @@ const Landing = () => {
   const { isResumeVisible, isHomeVisible, isWorkVisible, isExperienceVisible } =
     useAppSelector((state) => state.lading);
   const targetRef = useRef<HTMLDivElement>(null);
+  const myWorkRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
   const handleSayHello = () => {
     if (targetRef.current) {
       targetRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    dispatch(setDrawerState(false));
+  };
+  const handleMyWork = () => {
+    if (myWorkRef.current) {
+      myWorkRef.current.scrollIntoView({ behavior: "smooth" });
     }
     dispatch(setDrawerState(false));
   };
@@ -30,10 +37,10 @@ const Landing = () => {
         sx={{
           position: "relative",
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+          background: isDark ? "black" : "#ffffff",
+          border: isDark ? "1px solid black" : "lpx solid white",
         }}
-        className={`flex flex-col self-center border rounded-[5px] ${
-          isDark ? "bg-black" : "bg-[#ffffff]"
-        } w-[95%] lg:w-[90%] p-1 lg:p-6 `}
+        className={`flex flex-col self-center  rounded-[5px]  w-[95%] lg:w-[90%] p-1 lg:p-6 `}
       >
         <SocialMedia />
         <Header handleSayHello={handleSayHello} />
@@ -41,14 +48,14 @@ const Landing = () => {
           {isHomeVisible && (
             <>
               <Home handleSayHello={handleSayHello} />
-              <TopSkillView />
+              <TopSkillView handleClick={handleMyWork} />
               <AboutMe />
-              <MyWork />
+              <MyWork targetRef={myWorkRef} />
               <ContactMe targetRef={targetRef} />
             </>
           )}
           {isResumeVisible && <MyResume />}
-          {isWorkVisible && <MyWork />}
+          {isWorkVisible && <MyWork targetRef={myWorkRef} />}
           {isExperienceVisible && <MyExperience />}
 
           <div className="flex flex-col justify-center items-center self-center mt-[2%]">

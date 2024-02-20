@@ -83,11 +83,11 @@ const Home = ({ handleSayHello }: HomeProps) => {
           </IconButton>
         </span>
       </div>
-      <div className="flex flex-col w-4/5 lg:w-3/5 h-fit justify-center items-center ">
-        <img src="./mypic.png" alt="my cartoon" />
+      <div className="flex flex-col w-full  h-fit justify-center items-center">
+        <img src="./mypic.png" alt="my cartoon" className="w-fit h-fit" />
         <Typography
           variant="subtitle2"
-          className="text-[10px] lg:text-sm text-wrap italic"
+          className="text-wrap italic w-full md:w-[460px] "
         >
           {quate}
         </Typography>

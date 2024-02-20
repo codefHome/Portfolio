@@ -1,9 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
 import HorizontalDivider from "../components/HorizontalDivider";
 import ButtonWithAnimation from "../components/ButtonWithAnimation";
+import { useAppSelector } from "../store/hooks";
+import { MyWorkType } from "../types/types";
 
-const TopSkillView = () => {
+const TopSkillView = ({ handleClick }: MyWorkType) => {
+  const { isDark } = useAppSelector((state) => state.lading);
   return (
     <div className="flex flex-col mt-[7%]  ">
       <Typography variant="caption">My Expertise</Typography>
@@ -12,9 +14,9 @@ const TopSkillView = () => {
       <Box
         sx={{
           width: "100%",
-          border: "1px solid #fff",
+          border: isDark ? "1px solid #3D3D3D" : "1px solid #fff",
           borderRadius: "15px",
-          background: "#ffffff",
+          background: isDark ? "#3D3D3D" : "#fff",
           boxShadow:
             "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
           p: "20px",
@@ -42,7 +44,7 @@ const TopSkillView = () => {
           <Typography variant="subtitle1" sx={{ mt: "20px" }}>
             Back-end
           </Typography>
-          <Typography className="flex w-fit leading-normal">
+          <Typography variant="subtitle2" className="flex w-fit leading-normal">
             I'm proficient in Node.js, Express.js, Nest.js, and TypeORM for
             building robust REST API and managing database interactions with
             MongoDB, MYSQL, and PostgreSQL. I excel in API documentation using
@@ -50,7 +52,7 @@ const TopSkillView = () => {
             Kubernetes. I have a keen eye implementing secure authentication
             using JWT and Passport.js.
           </Typography>
-          <ButtonWithAnimation />
+          <ButtonWithAnimation handleClick={handleClick} />
         </div>
         <div className="flex justify-end w-full lg:w-1/2">
           <img

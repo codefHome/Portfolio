@@ -29,7 +29,9 @@ const ButtonWithIcon = ({ icon, label, handleClick }: IButtonProps) => {
       onClick={handleClick}
     >
       {icon}
-      <Typography sx={{ color: isHovered ? "white" : "" }}>{label}</Typography>
+      <Typography variant="subtitle1" sx={{ color: isHovered ? "white" : "" }}>
+        {label}
+      </Typography>
     </Box>
   );
 };

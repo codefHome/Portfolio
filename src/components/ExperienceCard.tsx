@@ -13,6 +13,7 @@ import {
 import { useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Experience } from "../types/types";
+import { useAppSelector } from "../store/hooks";
 const ExperienceCard = ({
   title,
   companyName,
@@ -31,14 +32,14 @@ const ExperienceCard = ({
     newExpanded[index] = !newExpanded[index];
     setExpanded(newExpanded);
   };
-
+  const { isDark } = useAppSelector((state) => state.lading);
   return (
     <Box
       sx={{
         display: "flex",
         flexWrap: "wrap",
-        border: "1px solid #ffede9",
-        background: "#ffede9",
+        border: isDark ? "1px solid white" : "1px solid #ffede9",
+        background: isDark ? "#3D3D3D" : "#ffede9",
         padding: "20px",
         boxShadow:
           "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
@@ -64,7 +65,7 @@ const ExperienceCard = ({
         <a href={companyLink} target="_blank">
           <Typography
             sx={{
-              color: "blue",
+              color: isDark ? "orange" : "blue",
             }}
             component="span"
           >
@@ -82,8 +83,8 @@ const ExperienceCard = ({
             sx={{
               display: "flex",
               flexWrap: "wrap",
-              border: "1px solid white",
-              background: "white",
+              border: isDark ? "1px solid #515151" : "1px solid white",
+              background: isDark ? "#515151" : "white",
               mt: "20px",
               boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
 
@@ -107,10 +108,10 @@ const ExperienceCard = ({
                   flexDirection: "column",
                   justifySelf: "center",
                   width: "100%",
-                  border: "1px solid #ffede9",
+                  border: isDark ? "1px solid #3D3D3D" : "1px solid #ffede9",
                   alignSelf: "center",
                   borderRadius: "15px",
-                  background: "#ffede9",
+                  background: isDark ? "#3D3D3D" : "#ffede9",
                   boxShadow: "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset",
                   px: "20px",
                 }}
@@ -118,17 +119,13 @@ const ExperienceCard = ({
               >
                 <span className="flex flex-wrap md:flex-nowrap justify-between w-full pt-2 md:pt-0 md:mb-[-5px]">
                   <span className="hidden md:flex flex-wrap justify-start items-center  ">
-                    <Typography variant="overline" sx={{ mb: "-15px" }}>
-                      Project:
-                    </Typography>
+                    <Typography variant="overline">Project:</Typography>
                     <Typography variant="subtitle2" className="flex flex-wrap">
                       &nbsp;{project?.ProjectName}
                     </Typography>
                   </span>
                   <span className="hidden md:flex flex-wrap justify-start  items-center">
-                    <Typography variant="overline" sx={{ mb: "-15px" }}>
-                      Location:
-                    </Typography>
+                    <Typography variant="overline">Location:</Typography>
                     <Typography>
                       &nbsp;{project?.location}
                       <Typography variant="overline" component="span">
@@ -173,7 +170,7 @@ const ExperienceCard = ({
                       sx={{
                         fontSize: "12px",
                         mr: "8px",
-                        color: "green",
+                        color: isDark ? "orange" : "green",
                       }}
                     >
                       &#9658;
@@ -183,7 +180,10 @@ const ExperienceCard = ({
                 ))}
               </List>
               <Typography variant="overline">Technologies:</Typography>
-              <Typography sx={{ color: "#00c6ff" }} variant="subtitle2">
+              <Typography
+                sx={{ color: isDark ? "orange" : "#00c6ff" }}
+                variant="subtitle2"
+              >
                 {project?.technologies}
               </Typography>
             </AccordionDetails>

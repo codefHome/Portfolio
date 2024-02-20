@@ -1,8 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import HorizontalDivider from "../components/HorizontalDivider";
 import ProjectCard from "../components/ProjectCard";
+import { ContactMeProps } from "../types/types";
 
-const MyWork = () => {
+const MyWork = ({ targetRef }: ContactMeProps) => {
   const projects = [
     {
       id: 1,
@@ -41,7 +42,7 @@ const MyWork = () => {
     },
   ];
   return (
-    <div className="flex flex-col ">
+    <div ref={targetRef} className="flex flex-col ">
       <Typography variant="caption"> My Projects</Typography>
       <Typography variant="subtitle2">
         Project's that I have been working on

@@ -1,4 +1,6 @@
-export const BuildWebIcon = () => {
+import { IconProps } from "../../types/types";
+
+export const BuildWebIcon = ({ color }: IconProps) => {
   return (
     <svg
       version="1.1"
@@ -7,7 +9,7 @@ export const BuildWebIcon = () => {
       width={24}
       height={24}
       viewBox="0 0 32 32"
-      fill="#000000"
+      fill={color}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g

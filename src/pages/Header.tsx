@@ -20,7 +20,7 @@ import SideMenu from "./SideMenu";
 import { HeaderProps } from "../types/types";
 const Header = ({ handleSayHello }: HeaderProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const { openDrawer } = useAppSelector((state) => state.lading);
+  const { openDrawer, isDark } = useAppSelector((state) => state.lading);
 
   const mouseEnter = () => {
     setIsHovered(true);
@@ -86,7 +86,10 @@ const Header = ({ handleSayHello }: HeaderProps) => {
           </div>
 
           <Box sx={{ position: "inherit" }}>
-            <ButtonWithIcon label="bedada6@gmail.com" icon={<EmailIcon />} />
+            <ButtonWithIcon
+              label="bedada6@gmail.com"
+              icon={<EmailIcon sx={{ color: isDark ? "#fff" : "#000" }} />}
+            />
           </Box>
           <IconButton onClick={handleDarkMode}>
             <Brightness4Icon />
@@ -96,21 +99,23 @@ const Header = ({ handleSayHello }: HeaderProps) => {
           <ButtonWithIcon
             handleClick={handleWorks}
             label="Works"
-            icon={<InsertDriveFileIcon />}
+            icon={
+              <InsertDriveFileIcon sx={{ color: isDark ? "#fff" : "#000" }} />
+            }
           />
           <ButtonWithIcon
             handleClick={handleResume}
             label="Resume"
-            icon={<PersonIcon />}
+            icon={<PersonIcon color={isDark ? "#fff" : "#000"} />}
           />
           <ButtonWithIcon
             handleClick={handleExperience}
             label="Experience"
-            icon={<ExperienceIcon />}
+            icon={<ExperienceIcon color={isDark ? "#fff" : "#000"} />}
           />
         </div>
       </div>
-      <div className="flex lg:hidden justify-end w-full">
+      <div className="flex lg:hidden justify-end items-center w-full">
         <IconButton onClick={handleOpen}>
           <MenuIcon />
         </IconButton>

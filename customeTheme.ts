@@ -86,7 +86,7 @@ const lightTheme = createTheme({
       fontWeight: 600,
     },
     subtitle1: {
-      color: '#fff',
+      color: '#000',
       fontWeight: 400,
       fontSize: '20px',
       lineHeight: 'normal',
@@ -169,7 +169,7 @@ const darkTheme = createTheme({
       fontWeight: 600,
     },
     subtitle1: {
-      color: '#000',
+      color: '#ffffff',
       fontWeight: 400,
       fontSize: '20px',
       lineHeight: 'normal',
@@ -177,7 +177,7 @@ const darkTheme = createTheme({
       textTransform: 'none',
     },
     subtitle2: {
-        color: '#2e2e2e',
+        color: '#ffffff',
         fontWeight: 400,
         fontSize: '16px',
         lineHeight: 'normal',

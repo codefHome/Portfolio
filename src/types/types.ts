@@ -92,3 +92,11 @@ export interface LandingTypes {
   export interface HeaderProps{
     handleSayHello: () => void;
   }
+
+  export interface IconProps{
+    color:string;
+  }
+
+  export interface MyWorkType{
+    handleClick: () => void;
+  }

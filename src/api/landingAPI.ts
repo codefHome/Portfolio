@@ -12,11 +12,18 @@ export const landingPageAPI = createApi({
     getExperience: builder.query({
       query: () => "getAllExperience"
     }),
-   
+    sendMail:  builder.mutation({
+      query: (data) => ({
+        url: `sendMail`,
+        method: 'POST',
+        body: data,
+      }),
+    }),
 
 })
 })
 
 export const {
     useGetExperienceQuery,
+    useSendMailMutation
 } = landingPageAPI

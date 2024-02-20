@@ -6,8 +6,10 @@ import SchoolIcon from "@mui/icons-material/School";
 import { ExperienceIcon } from "../assets/icons/ExperienceIcon";
 import { BuildWebIcon } from "../assets/icons/BuildWebIcon";
 import { FreeTime } from "../assets/icons/FreeTime";
+import { useAppSelector } from "../store/hooks";
 
 const AboutMe = () => {
+  const { isDark } = useAppSelector((state) => state.lading);
   return (
     <div className="flex  mt-[17%] justify-center items-center mb-[10%] ">
       <Box
@@ -17,8 +19,8 @@ const AboutMe = () => {
           alignItems: "center",
           borderRadius: "15px",
           p: "20px",
-          border: "1px solid #d6f3e7",
-          background: "#d6f3e7",
+          border: isDark ? "1px solid #333333" : "1px solid #d6f3e7",
+          background: isDark ? "#333333" : "#92e3a9",
           boxShadow:
             "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
         }}
@@ -39,17 +41,25 @@ const AboutMe = () => {
               />
               <span className="flex flex-col  w-full mt-3">
                 <AboutMeCard
-                  icon={<ExperienceIcon />}
+                  icon={<ExperienceIcon color={isDark ? "white" : "black"} />}
                   title="In Locker"
                   url="Over 5 years Experience"
                 />
                 <AboutMeCard
-                  icon={<SchoolIcon sx={{ width: "24px", height: "24px" }} />}
+                  icon={
+                    <SchoolIcon
+                      sx={{
+                        width: "24px",
+                        height: "24px",
+                        color: isDark ? "white" : "black",
+                      }}
+                    />
+                  }
                   title="Got MSc"
                   url="Software Engineering"
                 />
                 <AboutMeCard
-                  icon={<CodeIcon />}
+                  icon={<CodeIcon sx={{ color: isDark ? "white" : "black" }} />}
                   title="Upscale"
                   url={
                     <a
@@ -61,7 +71,7 @@ const AboutMe = () => {
                   }
                 />
                 <AboutMeCard
-                  icon={<BuildWebIcon />}
+                  icon={<BuildWebIcon color={isDark ? "white" : "black"} />}
                   title="Crafting"
                   url={
                     <a
@@ -73,7 +83,7 @@ const AboutMe = () => {
                   }
                 />
                 <AboutMeCard
-                  icon={<FreeTime />}
+                  icon={<FreeTime color={isDark ? "white" : "black"} />}
                   title="Leisure"
                   url="Watch Football, Walk"
                 />
@@ -82,7 +92,7 @@ const AboutMe = () => {
             <Typography variant="overline">Me at a glance</Typography>
             <Typography
               sx={{
-                color: "gray",
+                color: isDark ? "white" : "gray",
                 fontSize: "12px",
                 mt: "-12px",
                 ml: "2px",
@@ -106,7 +116,7 @@ const AboutMe = () => {
               continually enhancing my skills, reflecting a strong sense of
               discipline and dedication.
             </Typography>
-            <Typography>
+            <Typography variant="subtitle2">
               During my leisure time, I enjoy watching TV, catching football
               matches, and going for walks. These activities offer both
               entertainment and relaxation, allowing me to unwind and recharge.

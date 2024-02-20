@@ -1,4 +1,6 @@
-export const FreeTime = () => {
+import { IconProps } from "../../types/types";
+
+export const FreeTime = ({ color }: IconProps) => {
   return (
     <svg
       version="1.1"
@@ -7,7 +9,7 @@ export const FreeTime = () => {
       width={24}
       height={24}
       viewBox="0 0 32 32"
-      fill="#000000"
+      fill={color}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g

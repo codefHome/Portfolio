@@ -1,4 +1,6 @@
-export const PersonIcon = () => {
+import { IconProps } from "../../types/types";
+
+export const PersonIcon = ({ color }: IconProps) => {
   return (
     <svg
       height={24}
@@ -7,7 +9,7 @@ export const PersonIcon = () => {
       id="_x32_"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      fill="#000000"
+      fill={color}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g

@@ -10,7 +10,10 @@ import { ExperienceIcon } from "../assets/icons/ExperienceIcon";
 import { PersonIcon } from "../assets/icons/PersonIcon";
 import ButtonWithIcon from "../components/ButtonWithIcon";
 import EmailIcon from "@mui/icons-material/Email";
-import { useAppSelector } from "../store/hooks";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import { setIsDark } from "../store/slices/landingSlice";
 const SideMenu = ({
   open,
   handleClose,
@@ -20,9 +23,14 @@ const SideMenu = ({
   handleResume,
   handleSayHello,
 }: SideMenuProps) => {
-  const { isHomeVisible } = useAppSelector((state) => state.lading);
+  const { isHomeVisible, isDark } = useAppSelector((state) => state.lading);
+  const dispatch = useAppDispatch();
+  const handleDarkMode = () => {
+    dispatch(setIsDark());
+  };
+
   const list = () => (
-    <Box className="w-3/5">
+    <Box className="w-fit">
       <List>
         <ListItem disablePadding>
           <ListItemButton>
@@ -30,30 +38,42 @@ const SideMenu = ({
               <ButtonWithIcon
                 handleClick={handleHome}
                 label="Home"
-                icon={<HomeIcon />}
+                icon={<HomeIcon sx={{ color: isDark ? "white" : "black" }} />}
               />
               <ButtonWithIcon
                 handleClick={handleWorks}
                 label="Works"
-                icon={<InsertDriveFileIcon />}
+                icon={
+                  <InsertDriveFileIcon
+                    sx={{ color: isDark ? "white" : "black" }}
+                  />
+                }
               />
               <ButtonWithIcon
                 handleClick={handleResume}
                 label="Resume"
-                icon={<PersonIcon />}
+                icon={<PersonIcon color={isDark ? "white" : "black"} />}
               />
               <ButtonWithIcon
                 handleClick={handleExperience}
                 label="Experience"
-                icon={<ExperienceIcon />}
+                icon={<ExperienceIcon color={isDark ? "white" : "black"} />}
               />
               {isHomeVisible && (
                 <ButtonWithIcon
                   handleClick={handleSayHello}
                   label="Say Hello"
-                  icon={<EmailIcon />}
+                  icon={
+                    <EmailIcon sx={{ color: isDark ? "white" : "black" }} />
+                  }
                 />
               )}
+
+              <ButtonWithIcon
+                handleClick={handleDarkMode}
+                label={isDark ? "light" : "Dark"}
+                icon={<Brightness4Icon />}
+              />
             </div>
           </ListItemButton>
         </ListItem>

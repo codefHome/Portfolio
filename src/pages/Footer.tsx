@@ -1,4 +1,4 @@
-import { IconButton } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import ButtonWithIcon from "../components/ButtonWithIcon";
 import { useAppDispatch } from "../store/hooks";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -51,9 +51,13 @@ const Footer = () => {
           <ButtonWithIcon handleClick={handleResume} label="Resume" />
           <ButtonWithIcon handleClick={handleExperience} label="Experience" />
         </div>
-        <div className="flex w-full justify-end  items-center">
-          {Date()}, Addis Ababa, Ethiopia
-        </div>
+        <Typography
+          variant="subtitle1"
+          className="flex w-full justify-end  items-center"
+        >
+          {new Date().toLocaleString("default", { month: "long" })},&nbsp;
+          {new Date().getFullYear()}
+        </Typography>
       </div>
       <div className="flex lg:hidden justify-center">
         <ul className="flex justify-between items-center w-full px-1">
@@ -79,9 +83,9 @@ const Footer = () => {
             </a>
           </li>
 
-          <li>
-            {new Date().toLocaleString("default", { month: "long" })}{" "}
-            {new Date().getFullYear()}, Addis Ababa, Ethiopia
+          <li className="flex justify-center items-center">
+            {new Date().toLocaleString("default", { month: "long" })},&nbsp;
+            {new Date().getFullYear()}
           </li>
         </ul>
       </div>

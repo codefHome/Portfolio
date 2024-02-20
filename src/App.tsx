@@ -8,7 +8,7 @@ function App() {
   return (
     <div
       className={`flex flex-col   h-auto px-0 lg:px-[5%] pt-[5%]  ${
-        isDark ? "bg-gray" : "bg-[#d6f3e7]"
+        isDark ? "bg-[#474747]" : "bg-[#d6f3e7]"
       }`}
     >
       <Landing />

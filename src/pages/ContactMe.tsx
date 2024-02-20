@@ -5,32 +5,23 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import ContactSchemaValidator, { ContactSchema } from "../schema/contantSchema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { ContactMeProps, ContactMeTypes } from "../types/types";
+import { Controller } from "react-hook-form";
+import { ContactMeProps } from "../types/types";
+import { useAppSelector } from "../store/hooks";
+import useContactMeForm from "../hooks/useContactMeForm";
 
 const ContactMe = ({ targetRef }: ContactMeProps) => {
-  const {
-    formState: { errors },
-    handleSubmit,
-    control,
-  } = useForm<ContactSchemaValidator>({
-    mode: "onChange",
+  const { isDark } = useAppSelector((state) => state.lading);
+  const { errors, handleSubmit, onSubmit, control, success } =
+    useContactMeForm();
 
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-    resolver: zodResolver(ContactSchema),
-  });
-  const onSubmit: SubmitHandler<ContactSchemaValidator> = async (
-    data: ContactMeTypes
-  ) => {
-    console.log({ data });
-  };
-
+  if (success) {
+    return (
+      <div className="w-full h-full">
+        <img src="./mail.gif" alt="success message" />
+      </div>
+    );
+  }
   return (
     <Box
       ref={targetRef}
@@ -38,9 +29,9 @@ const ContactMe = ({ targetRef }: ContactMeProps) => {
         display: "flex",
         flexDirection: "column",
         justifySelf: "center",
-        border: "1px solid #fff",
+        border: isDark ? "1px solid black" : "1px solid #fff",
         borderRadius: "15px",
-        background: "#ffffff",
+        background: isDark ? "black" : "#ffffff",
       }}
       className="flex flex-col  mt-[10%] w-full ml-[-13%] lg:ml-0 self-center"
     >
@@ -50,10 +41,10 @@ const ContactMe = ({ targetRef }: ContactMeProps) => {
           flexDirection: "column",
           justifySelf: "center",
           width: "100%",
-          border: "1px solid #ffede9",
+          border: isDark ? "1px solid #474747" : "1px solid #ffede9",
           // alignSelf: "center",
           borderRadius: "15px",
-          background: "#ffede9",
+          background: isDark ? "#474747" : "#ffede9",
           boxShadow:
             "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px",
           p: "20px",

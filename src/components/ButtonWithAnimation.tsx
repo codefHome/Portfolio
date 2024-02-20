@@ -1,11 +1,12 @@
 import { IconButton, Typography } from "@mui/material";
+import { MyWorkType } from "../types/types";
 
-const ButtonWithAnimation: React.FC = () => {
+const ButtonWithAnimation = ({ handleClick }: MyWorkType) => {
   return (
     <IconButton
+      onClick={handleClick}
       sx={{
         position: "relative",
-        // overflow: "hidden",
         borderRadius: "25px",
         width: "fit-content",
         px: "20px",

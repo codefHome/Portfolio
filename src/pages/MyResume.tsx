@@ -1,6 +1,7 @@
 import { Button, Typography } from "@mui/material";
 import HorizontalDivider from "../components/HorizontalDivider";
 import TechStackCard from "../components/TechStackCard";
+import { useAppSelector } from "../store/hooks";
 
 const MyResume = () => {
   const resume = [
@@ -104,29 +105,37 @@ const MyResume = () => {
       ],
     },
   ];
-
+  const { isDark } = useAppSelector((state) => state.lading);
   return (
     <div className="flex flex-col ml-[-12%] lg:ml-0 self-center px-3 lg:px-0">
-      <Typography variant="caption">Technologies I Use</Typography>
+      <Typography variant="caption" className="hidden md:flex">
+        Technologies I Use
+      </Typography>
+      <Typography variant="caption" className="flex md:hidden">
+        Technologies
+      </Typography>
       <div className="flex justify-between">
         <span className="flex flex-col">
           <Typography variant="subtitle2">My Tech stacks</Typography>
           <HorizontalDivider />
         </span>
-        <Button
-          sx={{
-            borderRadius: "15px",
-            background: "#ffede9",
-            textTransform: "none",
-            color: "white",
-            fontSize: "18px",
-            boxShadow:
-              "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px",
-          }}
-          className="w-[160px] md:w-[250px] h-[50px]"
-        >
-          Download Resume
-        </Button>
+        <span className="hidden md:flex">
+          <Button
+            sx={{
+              borderRadius: "15px",
+              border: isDark ? "1px solid white" : "",
+              background: isDark ? "#3D3D3D" : "#ffede9",
+              textTransform: "none",
+              color: "white",
+              fontSize: "18px",
+              boxShadow:
+                "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px",
+            }}
+            className="w-[160px] md:w-[250px] h-[50px]"
+          >
+            Download Resume
+          </Button>
+        </span>
       </div>
       <div className="flex flex-col gap-10">
         {resume.map((stacks, index) => (
