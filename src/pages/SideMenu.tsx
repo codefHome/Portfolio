@@ -13,7 +13,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 import Brightness4Icon from "@mui/icons-material/Brightness4";
-import { setIsDark } from "../store/slices/landingSlice";
+import { setDrawerState, setIsDark } from "../store/slices/landingSlice";
 const SideMenu = ({
   open,
   handleClose,
@@ -27,6 +27,7 @@ const SideMenu = ({
   const dispatch = useAppDispatch();
   const handleDarkMode = () => {
     dispatch(setIsDark());
+    dispatch(setDrawerState(false));
   };
 
   const list = () => (
