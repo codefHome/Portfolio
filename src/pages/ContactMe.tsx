@@ -59,21 +59,21 @@ const ContactMe = ({ targetRef }: ContactMeProps) => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col gap-4 mt-10">
             <Controller
-              name="name"
+              name="senderName"
               control={control}
               render={({ field }) => (
                 <TextField
                   {...field}
                   type="text"
-                  id="name"
+                  id="senderName"
                   placeholder="Your Name"
                   label="Name"
                   variant="outlined"
                   fullWidth
-                  error={!!errors?.name}
+                  error={!!errors?.senderName}
                   helperText={
                     <FormHelperText sx={{ fontSize: "12px" }}>
-                      {errors?.name?.message}
+                      {errors?.senderName?.message}
                     </FormHelperText>
                   }
                   sx={{ fontSize: "12px" }}

@@ -106,6 +106,14 @@ const MyResume = () => {
     },
   ];
   const { isDark } = useAppSelector((state) => state.lading);
+  const downloadPDF = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.setAttribute("download", "Bedada_Bekele_Resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    link.parentNode?.removeChild(link);
+  };
   return (
     <div className="flex flex-col ml-[-12%] lg:ml-0 self-center px-3 lg:px-0">
       <Typography variant="caption" className="hidden md:flex">
@@ -121,6 +129,7 @@ const MyResume = () => {
         </span>
         <span className="hidden md:flex">
           <Button
+            onClick={downloadPDF}
             sx={{
               borderRadius: "15px",
               border: isDark ? "1px solid white" : "",

@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const ContactSchema = z.object({
-    name:z.string().max(30).refine((value) => value.trim().length > 0, {
+    senderName:z.string().max(30).refine((value) => value.trim().length > 0, {
         message: "Name is required",
       }),
       email: z.string().email("Please enter a valid email.").refine((value) => value.trim().length > 0, {

@@ -30,7 +30,7 @@ export interface ProjectCardProps{
     
 }
 export interface ContactMeTypes{
-    name:string;
+    senderName:string;
     email:string;
     message:string;
 }

@@ -86,10 +86,12 @@ const Header = ({ handleSayHello }: HeaderProps) => {
           </div>
 
           <Box sx={{ position: "inherit" }}>
-            <ButtonWithIcon
-              label="bedada6@gmail.com"
-              icon={<EmailIcon sx={{ color: isDark ? "#fff" : "#000" }} />}
-            />
+            <a href="mailto:bedada6@gmail.com">
+              <ButtonWithIcon
+                label="bedada6@gmail.com"
+                icon={<EmailIcon sx={{ color: isDark ? "#fff" : "#000" }} />}
+              />
+            </a>
           </Box>
           <IconButton onClick={handleDarkMode}>
             <Brightness4Icon />

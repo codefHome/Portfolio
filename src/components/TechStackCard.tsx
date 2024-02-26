@@ -16,7 +16,7 @@ const TechStackCard = ({ images, stacks, description }: TechStackCardProps) => {
       sx={{
         display: "flex",
         flexWrap: "wrap",
-        border: isDark ? "1px solid white" : "1px solid #BDF7B4",
+        border: isDark ? "1px solid #3D3D3D" : "1px solid #BDF7B4",
         background: isDark ? "#3D3D3D" : "#BDF7B4",
         padding: "10px",
         boxShadow:
@@ -57,7 +57,10 @@ const TechStackCard = ({ images, stacks, description }: TechStackCardProps) => {
         <Button
           onClick={handleShowFront}
           className="flex self-end"
-          variant="contained"
+          sx={{
+            border: isDark ? "1px solid white" : "#1DE355",
+            background: isDark ? "#3D3D3D" : "#1DE355",
+          }}
         >
           {showFrontDetail ? "See Icons" : "See in word"}
         </Button>

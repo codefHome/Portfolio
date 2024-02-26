@@ -17,7 +17,7 @@ const {
     mode: "onChange",
 
     defaultValues: {
-      name: "",
+      senderName: "",
       email: "",
       message: "",
     },
@@ -32,9 +32,10 @@ const {
    setSuccess(true)
    setTimeout(() => {
     setSuccess(false)
-   }, 2000);
+   }, 1000);
 
    }
+   console.log({data})
   };
 return{
     errors,

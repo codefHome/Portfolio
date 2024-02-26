@@ -13,7 +13,6 @@ const ProjectCard = ({ stacks, url, gitHubUrl, image }: ProjectCardProps) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  console.log(window.innerWidth);
   return (
     <a href={url} target="_blank">
       <Box

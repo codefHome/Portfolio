@@ -16,7 +16,7 @@ const Home = ({ handleSayHello }: HomeProps) => {
           Bekele
         </Typography>
         <Typography sx={{ mt: "-15px" }} variant="subtitle1">
-          Sr. Software Engineer
+          Software Engineer
         </Typography>
         <Typography
           variant="subtitle2"
