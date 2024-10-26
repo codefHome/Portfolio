@@ -5,15 +5,16 @@ import AboutMe from "./AboutMe";
 import MyWork from "./MyWork";
 import ContactMe from "./ContactMe";
 import Header from "./Header";
-import MyResume from "./MyResume";
+
 import Home from "./Home";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
-import MyExperience from "./MyExperience";
+
 import { useRef } from "react";
 import { setDrawerState } from "../store/slices/landingSlice";
+import { LandingProps } from "../types/types";
 
-const Landing = () => {
-  const { isResumeVisible, isHomeVisible, isWorkVisible, isExperienceVisible } =
+const Landing = ({ child }: LandingProps) => {
+  const { isHomeVisible } =
     useAppSelector((state) => state.lading);
   const targetRef = useRef<HTMLDivElement>(null);
   const myWorkRef = useRef<HTMLDivElement>(null);
@@ -54,16 +55,15 @@ const Landing = () => {
               <ContactMe targetRef={targetRef} />
             </>
           )}
-          {isResumeVisible && <MyResume />}
-          {isWorkVisible && <MyWork targetRef={myWorkRef} />}
-          {isExperienceVisible && <MyExperience />}
+
+          {child}
 
           <div className="flex flex-col justify-center items-center self-center mt-[2%]">
             <Typography variant="caption">Thank you</Typography>
             <Typography variant="caption">😘 💝 </Typography>
           </div>
         </div>
-      </Box>
+      </Box> 
     </div>
   );
 };

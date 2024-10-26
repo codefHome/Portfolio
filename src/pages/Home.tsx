@@ -5,7 +5,7 @@ import { HomeProps } from "../types/types";
 
 const Home = ({ handleSayHello }: HomeProps) => {
   const quate =
-    "Hard work beats talent when talent doesn’t work hard- `${author}`. Talk is cheap. Show me the code '${author}`";
+    `"Hard work beats talent when talent doesn’t work hard" - \${author}. "Talk is cheap. Show me the code" - \${author}"`;
 
   return (
     <div className="flex flex-wrap lg:flex-nowrap justify-between items-center ">
@@ -89,7 +89,7 @@ const Home = ({ handleSayHello }: HomeProps) => {
           variant="subtitle2"
           className="text-wrap italic w-full md:w-[460px] "
         >
-          {quate}
+          `{quate}`
         </Typography>
       </div>
     </div>

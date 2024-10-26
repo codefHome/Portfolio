@@ -18,10 +18,11 @@ import {
 import { useState } from "react";
 import SideMenu from "./SideMenu";
 import { HeaderProps } from "../types/types";
+import { useNavigate } from "react-router-dom";
 const Header = ({ handleSayHello }: HeaderProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const { openDrawer, isDark } = useAppSelector((state) => state.lading);
-
+  const navigate = useNavigate()
   const mouseEnter = () => {
     setIsHovered(true);
   };
@@ -32,18 +33,21 @@ const Header = ({ handleSayHello }: HeaderProps) => {
   const handleResume = () => {
     dispatch(setIsResumeVisible(true));
     window.scrollTo(0, 0);
+    navigate('/resume')
   };
   const handleWorks = () => {
     dispatch(setIsWorkVisible(true));
-    window.scrollTo(0, 0);
+    navigate('/work')
   };
   const handleExperience = () => {
     dispatch(setIsExperienceVisible(true));
     window.scrollTo(0, 0);
+    navigate('/experience')
   };
   const handleHome = () => {
     dispatch(setIsHomeVisible(true));
     window.scrollTo(0, 0);
+    navigate('/')
   };
 
   const handleOpen = () => {

@@ -39,7 +39,7 @@ const ExperienceCard = ({
         display: "flex",
         flexWrap: "wrap",
         border: isDark ? "1px solid white" : "1px solid #ffede9",
-        background: isDark ? "#3D3D3D" : "#ffede9",
+        background: isDark ? "#3D3D3D" : "#BDF7B4",
         padding: "20px",
         boxShadow:
           "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
@@ -103,18 +103,18 @@ const ExperienceCard = ({
               className="w-full"
             >
               <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifySelf: "center",
-                  width: "100%",
-                  border: isDark ? "1px solid #3D3D3D" : "1px solid #ffede9",
-                  alignSelf: "center",
-                  borderRadius: "15px",
-                  background: isDark ? "#3D3D3D" : "#ffede9",
-                  boxShadow: "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset",
-                  px: "20px",
-                }}
+                // sx={{
+                //   display: "flex",
+                //   flexDirection: "column",
+                //   justifySelf: "center",
+                //   width: "100%",
+                //   border: isDark ? "1px solid #3D3D3D" : "1px solid #ffede9",
+                //   alignSelf: "center",
+                //   borderRadius: "15px",
+                //   background: isDark ? "#3D3D3D" : "#ffede9",
+                //   // boxShadow: "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset",
+                //   px: "20px",
+                // }}
                 className="flex flex-col w-full "
               >
                 <span className="flex flex-wrap md:flex-nowrap justify-between w-full pt-2 md:pt-0 md:mb-[-5px]">

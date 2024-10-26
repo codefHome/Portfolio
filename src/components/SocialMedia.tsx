@@ -10,8 +10,9 @@ const SocialMedia = () => {
         position: "fixed",
         left: "11%",
         top: "70%",
+
       }}
-      className="hidden lg:flex"
+      className="hidden lg:flex  mt-[-2%]"
     >
       <ul>
         <li>

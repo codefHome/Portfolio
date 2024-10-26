@@ -11,7 +11,7 @@ import { useAppSelector } from "../store/hooks";
 const AboutMe = () => {
   const { isDark } = useAppSelector((state) => state.lading);
   return (
-    <div className="flex  mt-[17%] justify-center items-center mb-[10%] ">
+    <div className="flex  mt-[17%] justify-center items-center mb-[10%]">
       <Box
         sx={{
           display: "flex",
@@ -24,9 +24,9 @@ const AboutMe = () => {
           boxShadow:
             "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
         }}
-        className="flex flex-col w-full lg:w-[65%] self-center ml-[-13%] lg:ml-0"
+        className="flex flex-col w-full md:w-[80%] xl:w-[65%] self-center ml-[-13%] lg:ml-0"
       >
-        <Typography variant="caption">About Me</Typography>
+        <Typography variant="caption" >About Me</Typography>
         <Typography variant="subtitle2">who I'm</Typography>
         <HorizontalDivider />
         <Box>
@@ -37,9 +37,9 @@ const AboutMe = () => {
                 alt="avatar show coding"
                 width="350px"
                 height="350px"
-                className="shadow-2xl rounded-lg w-fit"
+                className="shadow-2xl md:rounded-lg w-fit"
               />
-              <span className="flex flex-col  w-full mt-3">
+              <span className="flex flex-col  w-full mt-3 ">
                 <AboutMeCard
                   icon={<ExperienceIcon color={isDark ? "white" : "black"} />}
                   title="In Locker"
@@ -73,14 +73,7 @@ const AboutMe = () => {
                 <AboutMeCard
                   icon={<BuildWebIcon color={isDark ? "white" : "black"} />}
                   title="Crafting"
-                  url={
-                    <a
-                      href="https://my-react-pet-app.netlify.app/"
-                      target="_blank"
-                    >
-                      course-manager-app
-                    </a>
-                  }
+                  url="course-manager(loading ...)"
                 />
                 <AboutMeCard
                   icon={<FreeTime color={isDark ? "white" : "black"} />}

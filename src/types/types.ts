@@ -24,7 +24,7 @@ export interface AboutMeCardProps{
 export interface ProjectCardProps{
     url:string;
     stacks:string;
-    gitHubUrl:string;
+    description:string;
     image:string;
     title:string;
     
@@ -73,14 +73,14 @@ export interface LandingTypes {
   }
 
   export interface ContactMeProps {
-    targetRef: React.RefObject<HTMLDivElement>;
+    targetRef?: React.RefObject<HTMLDivElement>;
   }
-  export interface HomeProps{
+  export interface HomeProps {
     handleSayHello: () => void;
   }
 
-  export interface SideMenuProps{
-    open:boolean;
+  export interface SideMenuProps {
+    open: boolean;
     handleClose: () => void;
     handleWorks: () => void;
     handleHome: () => void;
@@ -89,14 +89,18 @@ export interface LandingTypes {
     handleSayHello: () => void;
   }
 
-  export interface HeaderProps{
+  export interface HeaderProps {
     handleSayHello: () => void;
   }
 
-  export interface IconProps{
-    color:string;
+  export interface IconProps {
+    color: string;
   }
 
-  export interface MyWorkType{
+  export interface MyWorkType {
     handleClick: () => void;
+  }
+
+  export interface LandingProps {
+    child?: ReactNode;
   }
