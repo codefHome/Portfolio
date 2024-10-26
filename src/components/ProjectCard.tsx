@@ -1,56 +1,47 @@
 import { Box, Typography } from "@mui/material";
 
-import { useState } from "react";
 import { ProjectCardProps } from "../types/types";
 
-const ProjectCard = ({ stacks, url, gitHubUrl, image }: ProjectCardProps) => {
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+const ProjectCard = ({ stacks, url, description, image }: ProjectCardProps) => {
+ 
+  const techStack=stacks?.split(',')
   return (
-    <a href={url} target="_blank">
+   
       <Box
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className="flex border-1 rounded-md w-full md:w-[320px] lg:w-[470px] xl:w-[400px]  h-[200px] shadow-[rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px] flex-grow-1 relative"
+        className="flex flex-col md:flex-row  border-1 gap-4 rounded-md  shadow-[rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px] flex-grow-1 relative"
       >
-        <img src={image} alt="project" className="w-full" />
-        {isHovered && (
-          <Box
-            sx={{
-              position: "absolute",
-              display: "flex",
-              flexDirection: "column",
-              bottom: 0,
-              left: 0,
-              width: "100%",
-              backgroundColor: "rgba(173, 216, 230, 0.8)",
-            }}
+         <a href={url} target="_blank" className="">
+        <img src={image} alt="project"  style={{width:'500px',height:'230px', objectFit:"fill"}}  />
+        </a>
+  
+          <div
+           
+            className="flex flex-col  pl-1 md:pl-10 w-full md:w-[60%] gap-2"
           >
-            <a href={gitHubUrl} target="_blank">
-              <Typography
-                sx={{ color: "blue", fontSize: "16px", fontStyle: "italic" }}
-              >
-                Check Source Code here
-              </Typography>
-            </a>
-            <span className="flex flex-wrap  w-full ">
-              {stacks.split(",").map((stack, index) => (
-                <Typography className=" w-[150px] text-left " key={index}>
-                  {stack}
+            <span>
+            <Typography  className=" text-blue-600 text-sm">Project description: </Typography>
+            <Typography variant="subtitle2" >{description}</Typography>
+            </span>
+          
+            <span className="flex flex-wrap  w-full items-center ">
+              <Typography  sx={{mr:'5px',color:'blue', fontSize:'16px'}}>Tech stack:</Typography>
+              {techStack.map((stack, index) => (
+                <Typography variant="subtitle2" className="text-left " key={index}>
+                  {` ${stack}${index != (techStack.length - 1) ? ',' : ''} `} 
                 </Typography>
               ))}
             </span>
-          </Box>
-        )}
+            <a href={url} target="_blank" className="w-full">
+              <Typography
+                sx={{ color: "blue", fontSize: "16px", fontStyle: "italic" }}
+              >
+                Check it here
+              </Typography>
+            </a>
+          </div>
+        {/* )} */}
       </Box>
-    </a>
+   
   );
 };
 

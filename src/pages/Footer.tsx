@@ -10,14 +10,17 @@ import {
   setIsExperienceVisible,
   setIsHomeVisible,
 } from "../store/slices/landingSlice";
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate()
   const handleResume = () => {
     dispatch(setIsResumeVisible(true));
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
+    navigate('/resume')
   };
   const handleWorks = () => {
     dispatch(setIsWorkVisible(true));
@@ -25,6 +28,7 @@ const Footer = () => {
       top: 0,
       behavior: "smooth",
     });
+    navigate('/work')
   };
   const handleExperience = () => {
     dispatch(setIsExperienceVisible(true));
@@ -32,6 +36,7 @@ const Footer = () => {
       top: 0,
       behavior: "smooth",
     });
+    navigate('/experience')
   };
   const handleHome = () => {
     dispatch(setIsHomeVisible(true));
@@ -39,6 +44,7 @@ const Footer = () => {
       top: 0,
       behavior: "smooth",
     });
+    navigate('/')
   };
   return (
     <div className="flex flex-col self-center justify-center w-full lg:w-[80%] mt-[2%]  mb-[2%]">

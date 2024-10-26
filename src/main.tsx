@@ -1,5 +1,5 @@
 import React from "react";
-
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from "./App.tsx";
 import "./index.css";
 import { Provider } from "react-redux";
@@ -14,7 +14,9 @@ const RootApp = () => {
   return (
     <React.StrictMode>
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+        <Router>
         <App />
+        </Router>
       </ThemeProvider>
     </React.StrictMode>
   );

@@ -9,11 +9,13 @@ const MyExperience = () => {
   const { data, isSuccess } = useGetExperienceQuery({});
   const [excel, setExcel] = useState<Experience>({} as Experience);
   const [hu, setHu] = useState<Experience>({} as Experience);
+  const [shega, setShega] = useState<Experience>({} as Experience);
   console.log({ data });
   useEffect(() => {
     if (isSuccess) {
-      setExcel(data[0]?.experiences[0]);
-      setHu(data[0]?.experiences[1]);
+      setExcel(data[0]?.experiences[1]);
+      setHu(data[0]?.experiences[2]);
+      setShega(data[0]?.experiences[0]);
     }
   }, [data]);
   return (
@@ -38,12 +40,21 @@ const MyExperience = () => {
 
       <Box className="flex flex-col gap-10 w-full">
         {!isSuccess && (
-          <Box className="flex justify-center items-center">
+          <Box className="flex justify-center items-center h-full">
             <CircularProgress />
           </Box>
         )}
         {isSuccess && (
           <>
+            <ExperienceCard
+              title={shega?.title}
+              companyName={shega?.companyName}
+              companyDescription={shega?.companyDescription}
+              companyLink={shega?.companyLink}
+              startYear={shega?.startYear}
+              endYear={shega?.endYear}
+              projects={shega?.projects}
+            />
             <ExperienceCard
               title={excel?.title}
               companyName={excel?.companyName}
