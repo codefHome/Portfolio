@@ -1,0 +1,161 @@
+{
+   
+    "experiences": [
+      {
+        "companyName": "Shega Media and DFS Ethiopia Hub",
+        "title": "Full-stack Software Engineer",
+        "companyDescription": "Shega is an information and technology company that offers in-depth insights into Ethiopia’s economy by delivering an integrated media, data, and intelligence solution designed to drive informed decision-making and promote innovation.",
+        "companyLink": "https://shega.co/",
+        "startYear": "April 2024",
+        "endYear": "present",
+        "projects": [
+          {
+            "ProjectName": "Shega Media",
+            "location": "Addis Ababa",
+            "workType": "onsite",
+            "role": "Full-stack Software Engineer",
+            "startDate": "April 2024",
+            "endDate": "present",
+            "projectDescription": "Shega produces high-value content including articles, analysis, reports, visuals, and a weekly newsletter. The platform features a job portal and event listings for startups and tech companies in Ethiopia. It offers a comprehensive database of Ethiopian startups, tech companies, investors, and support organizations. Users can manage profiles, post jobs, and add or claim company profiles. Additionally, Shega includes advertisement spots to support operational costs.",
+            "responsibility": [
+              "Built and maintained dynamic web applications using Next.js for the front-end and Strapi for the back-end",
+              "Worked closely with design and product teams to implement user interfaces that are both visually appealing and functional",
+              "Integrated front-end components with server-side logic, ensuring seamless communication between front-end and back-end systems",
+              "Implemented best practices for front-end optimization, such as code splitting, lazy loading, and server-side rendering, to improve loading times and overall performance"
+            ],
+            "technologies": "Next.js, ReactJS, Strapi, TypeScript, JavaScript, CSS, HTML, Git, AWS, Jira"
+          },
+          {
+            "ProjectName": "DFS Ethiopia Hub",
+            "location": "Addis Ababa",
+            "workType": "onsite",
+            "role": "Full-stack Software Engineer",
+            "startDate": "April 2024",
+            "endDate": "present",
+            "projectDescription": "DFS Ethiopia Hub empowers stakeholders with the data, insights, and resources they need to understand the evolving digital finance landscape in Ethiopia. We delve into key market trends, analyze financial inclusion levels, and explore the experiences of underserved communities. By illuminating both opportunities and challenges, we equip financial service providers to design impactful products and enablers to address critical gaps.",
+            "responsibility": [
+              "Built and maintained dynamic web applications using Next.js for the front-end and Strapi for the back-end",
+              "Worked closely with design and product teams to implement user interfaces that are both visually appealing and functional",
+              "Integrated front-end components with server-side logic, ensuring seamless communication between front-end and back-end systems",
+              "Implemented best practices for front-end optimization, such as code splitting, lazy loading, and server-side rendering, to improve loading times and overall performance"
+            ],
+            "technologies": "Next.js, ReactJS, Strapi, TypeScript, JavaScript, CSS, HTML, Git, AWS, Jira"
+          }
+        ]
+      },
+      {
+        "companyName": "Excellerent Solutions",
+        "title": "Software Engineer",
+        "companyDescription": "Excellerent is a global consulting company offering end-to-end services and solutions on Open Source, Cloud, API, and Automation technologies. By leveraging flexible project engagement models, agile methodologies, and the finest talent in the market, we improve operational efficiency and cost optimization to deliver business value.",
+        "companyLink": "https://excellerentsolutions.com/",
+        "startYear": "July 2022",
+        "endYear": "Present",
+        "projects": [
+          {
+            "ProjectName": "Arifpay",
+            "location": "Addis Ababa",
+            "workType": "onsite",
+            "role": "Front-end Sonftware Engineer",
+            "startDate": "July 2022",
+            "endDate": "Present",
+            "projectDescription": "Arifpay is a project aimed at revolutionizing Ethiopia's financial landscape with two main projects. The first project, ArifPOS, introduced innovative smartphone-based, POS, and QR payment systems, making it Ethiopia's pioneering Point of Sale (POS) Payment System Operator (PSO). The second project, ArifGateway, involved providing a range of payment gateway solutions for various financial activities, including utility bill payments, airtime top-ups, eCommerce transactions, and school fee processing. These projects represented a significant step forward in bringing secure, user-friendly digital payment solutions to the Ethiopian market, with a focus on fostering collaboration with commercial partners.",
+            "responsibility": [
+              "Developed features of Back office and Gateway components of the project",
+              "Strictly followed Agile ceremonies",
+              "Created dynamic user interfaces",
+              "Ensured seamless functionality",
+              "Demonstrated proficiency in debugging",
+              "Demonstrated proficiency in version control",
+              "Honed problem-solving abilities",
+              "Prioritized testing, performance optimization, and cross-browser compatibility"
+            ],
+            "technologies": "ReactJS, Redux Toolkit and Redux Toolkit Query, TypeScript, React hook Form, Material UI, TailwindCss, GitLab, NX for Monorepo, Recharts, Tuleap, Vite, ESLint, Prettier"
+          },
+          {
+            "ProjectName": "Vennderful Event Organizer Platform ",
+            "location": "Nashville, United State",
+            "workType": "remote",
+            "role": "Front-end Sonftware Engineer",
+            "startDate": "March 2023",
+            "endDate": "July, 2023",
+            "projectDescription": "The Event Tracking Project is a comprehensive system designed to streamline event planning and management. It integrates four main components: vendors, events, clients, and venues. The project provides a centralized platform for event planners to efficiently search for and select vendors, find suitable venues, and manage client preferences and event details. It simplifies communication, scheduling, and execution of events. Additional features include event calendar management, budget tracking, task assignment, and reporting. The project's primary goal is to optimize the event planning process by integrating vendor, event, client, and venue management into a single platform, ensuring successful events through streamlined coordination and organization.",
+            "responsibility": [
+              "Actively worked on various front-end features using React and Next.js.",
+              "Collaborated closely with the team, participating in daily standups, sharing progress and logic.",
+              "Contributed to sprint planning and feature milestone estimation.",
+              "Successfully resolved bugs to ensure a smooth user experience.",
+              "Conducted testing using Jest and React Testing Library.",
+              "Managed version control through git and Bitbucket.",
+              "Utilized Trello for task tracking and facilitation."
+            ],
+            "technologies": "React, Next.js, Material UI, React Hook Form, TypeScript, Zod schema validator, AWS for CI/CD, Jest, React test library,cypress, Bitbucket and Trello for task tracking"
+          },
+          {
+            "ProjectName": "Presence Browser ",
+            "location": "Addis Ababa,Ethiopia",
+            "workType": "onsite",
+            "role": "Full-stack Sonftware Engineer",
+            "startDate": "June 2021",
+            "endDate": "Feb, 2023",
+            "projectDescription": "The Presence Browser project is a platform that focuses on creating a decentralized public space on the internet. It offers features such as Canopi, enabling visitors to connect and interact over webpages, while ensuring a safe digital environment without fake profiles or predators. The platform emphasizes user privacy and control over their data and identity, allowing them to monetize their information as they see fit. Recognized as one of the top 10 most innovative blockchain companies, the project caters to various communities and offers on-page interactions, documentation, FAQs, and a dedicated layer called the Metaweb for meta-communities. Developed by Presence Labs, LLC, the project provides users with the opportunity to sign up for updates and news regarding its launch and access.",
+            "responsibility": [
+              "Contributed significantly to the Presence Browser project as a Full-stack Software Engineer.",
+              "Completed numerous features across various project modules, including extensions, SDKs, Admin Portal, Web SDK, Chrome extension, Presence app, and Account.",
+              "Participated actively in daily standups, sprint planning, bug fixing, and main feature development.",
+              "Implemented secure authentication techniques for API access."
+            ],
+            "technologies": "ReactJS, Nest.js, Typeorm, TailwindCSS, TypeScript, Swagger, PostgreSQL, Passport.js, JSON Web Tokens, Bitbucket, Git, JiraSoftware, Ant Design, Jest, react test library, NX Monorepo,Contex API, Redis"
+          }
+        ]
+      },
+      {
+        "companyName": "Haramaya University",
+        "title": "Full-stack Software Engineer",
+        "companyDescription": "Haramaya University is a leading institution in Ethiopia, dedicated to training competent graduates, conducting groundbreaking research, and driving sustainable development. With the goal of becoming one of the top ten universities in Eastern Africa, it strives for academic and research excellence. Guided by values such as innovation, social responsibility, integrity, and teamwork, Haramaya University plays a pivotal role in shaping education and making a significant impact in diverse fields locally and globally.",
+        "companyLink": "https://www.haramaya.edu.et/",
+        "startYear": "September 2016",
+        "endYear": "May, 2021",
+        "projects": [
+          {
+            "ProjectName": "Duplication Request System ",
+            "location": "Haramaya,Ethiopia",
+            "workType": "onsite",
+            "role": "Full-stack Sonftware Engineer",
+            "startDate": "January 2018",
+            "endDate": "May 2021",
+            "projectDescription": "The Duplication Request System is a web-based application that simplifies the handling of duplication requests. Users can submit requests with relevant details and supporting documents, which are then automatically routed for review and approval. The system tracks the request status, generates reports, and maintains a comprehensive record. Its purpose is to enhance efficiency, reduce manual paperwork, and facilitate prompt processing of duplication requests.",
+            "responsibility": [
+              "Worked on proposal designing",
+              "Participated in requirement gathering",
+              "Conducted analysis",
+              "Created architectural design",
+              "Designed user interface",
+              "Established connectivity with the database",
+              "Contributed significantly to driving the success of the project."
+            ],
+            "technologies": "ReactJS, Node.js,JavaScript, CSS, HTML, Git,GitHub,UML, Enterprice Architect, Microsoft Word"
+          },
+          {
+            "ProjectName": "IT Service Request System",
+            "location": "Haramaya,Ethiopia",
+            "workType": "onsite",
+            "role": "Full-stack Sonftware Engineer",
+            "startDate": "July 2017",
+            "endDate": "November 2018",
+            "projectDescription": "The IT Service Request Project is a web-based system that simplifies and manages the process of handling IT service requests. Users can submit requests with specific details and requirements, which are then automatically assigned to the appropriate IT personnel for review and resolution. The system tracks the status of each request, provides real-time updates to users, and generates reports for monitoring and analysis. Its primary goal is to enhance efficiency, streamline request handling, and ensure prompt resolution of IT service issues.",
+            "responsibility": [
+              "Participated in proposal designing",
+              "Contributed to requirement gathering",
+              "Conducted analysis",
+              "Assisted in architectural design",
+              "Contributed to UI design",
+              "Established database connectivity",
+              "Played an instrumental role in driving the success of the project."
+            ],
+            "technologies": "ReactJS, Node.js,JavaScript, CSS, HTML, Git,GitHub,UML, Enterprice Architect, Microsoft Word"
+          }
+        ]
+      }
+    ]
+
+  }

@@ -1,22 +1,23 @@
 import { Box, Typography } from "@mui/material";
 import HorizontalDivider from "../components/HorizontalDivider";
 import ExperienceCard from "../components/ExperienceCard";
-import { useGetExperienceQuery } from "../api/landingAPI";
+
 import { Experience } from "../types/types";
 import { useEffect, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
+import data from '../api/data.json'
 const MyExperience = () => {
-  const { data, isSuccess } = useGetExperienceQuery({});
+  // const { data, isSuccess } = useGetExperienceQuery({});
   const [excel, setExcel] = useState<Experience>({} as Experience);
   const [hu, setHu] = useState<Experience>({} as Experience);
   const [shega, setShega] = useState<Experience>({} as Experience);
-  console.log({ data });
+  console.log({ data:data?.experiences[1] });
   useEffect(() => {
-    if (isSuccess) {
-      setExcel(data[0]?.experiences[1]);
-      setHu(data[0]?.experiences[2]);
-      setShega(data[0]?.experiences[0]);
-    }
+    
+      setExcel(data?.experiences[1]);
+      setHu(data?.experiences[2]);
+      setShega(data?.experiences[0]);
+    
   }, [data]);
   return (
     <div className="flex flex-col w-full">
@@ -39,12 +40,12 @@ const MyExperience = () => {
       </span>
 
       <Box className="flex flex-col gap-10 w-full">
-        {!isSuccess && (
+        {/* {!isSuccess && (
           <Box className="flex justify-center items-center h-full">
             <CircularProgress />
           </Box>
-        )}
-        {isSuccess && (
+        )} */}
+        {/* {isSuccess && ( */}
           <>
             <ExperienceCard
               title={shega?.title}
@@ -74,7 +75,7 @@ const MyExperience = () => {
               projects={hu?.projects}
             />
           </>
-        )}
+        {/* )} */}
       </Box>
     </div>
   );
